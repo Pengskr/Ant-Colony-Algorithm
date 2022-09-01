@@ -89,6 +89,10 @@ for iter = 1 : iter_max
                     target_node = neighbor(k);
                 end
             end
+%             % 概率最大 作为下一个访问节点 (经实验对比，这种方式会丢失掉随机性，结果为一条水平直线)
+%             [Pmax, idx_Pmax] = max(P(2, :));
+%             target_node = neighbor(idx_Pmax);
+
 
             % 计算单步距离
             idx = find(nodes_data{node_step, 2} == target_node);
